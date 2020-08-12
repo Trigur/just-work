@@ -118,6 +118,8 @@ class Handler {
 }
 
 export default {
+    name: 'PinCode',
+
     functional: true,
 
     props: {
@@ -128,7 +130,7 @@ export default {
 
         length: {
             type: Number,
-            default: 1,
+            default: 4,
         },
     },
 

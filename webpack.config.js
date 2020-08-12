@@ -5,9 +5,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: './src/index.js',
+  mode: 'development',
   output: {
-    path: path.resolve(__dirname, './public/dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, './docs/dist'),
+    publicPath: '/docs/',
     filename: 'build.js'
   },
   module: {
@@ -64,7 +65,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'build.css'
     }),
   ],
   performance: {

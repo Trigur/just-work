@@ -1,0 +1,65 @@
+.pin-code {
+  outline: none !important;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  caret-color: transparent;
+}
+.pin-code__item {
+  outline: none !important;
+  position: relative;
+  width: 34px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  line-height: 1.3;
+  font-family: "Roboto", serif;
+  color: #fff;
+  border: none;
+  background: transparent;
+}
+.pin-code__item + .pin-code__item {
+  margin-left: 14px;
+}
+.pin-code__item::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #3C3C3C;
+  top: calc(50% - 5.5px);
+  left: calc(50% - 5.5px);
+}
+.pin-code__item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #B8B8B8;
+  transition: background-color 0.228s;
+}
+.pin-code__item--filled::after {
+  background-color: #8887CD;
+}
+.pin-code__item--filled::before {
+  opacity: 0;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+
